@@ -11,7 +11,7 @@ import {
 import { ObjectType, Field, ID } from 'type-graphql';
 
 @ObjectType()
-@Entity("${name}")
+@Entity("{name:${name.toLowerCase()}}")
 export class ${name} extends BaseEntity {
     @Field(() => ID)
     @PrimaryGeneratedColumn()
